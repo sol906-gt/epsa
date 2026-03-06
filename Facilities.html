@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>About EPSA</title>
+    <link rel="stylesheet" href="x.css">
+   <style>
+   body{
+    font-family: 'Times New Roman', Times, serif;
+   }
+   .link-options select {
+    width: 200px;        /* adjust size */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;}
+   </style>
+   
+</head>
+   <body>
+    <header><h1>Facilities</h1>
+    </header>
+     <script>
+  function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+</script>
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- Hamburger (optional for mobile) -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li class="dropdown">
+        <a href="#">About ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="about.html">About</a></li>
+          <li><a href="Functions.html">Functions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Services ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="PROGRAMS.html">Programs</a></li>
+          <li><a href="medical.html">Medical</a></li>
+          <li><a href="registration.html">Registration</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="Distribution.html">Distribution</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Facilities ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="Facilities.html">Facilities</a></li>
+          <li><a href="Coverage.html">Coverage</a></li>
+          <li><a href="WAREHOUSE.html">Warehouse</a></li>
+          <li><a href="staff.html">Staff</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+    <a href="https://www.google.com/">search</a>
+</li>
+<a href="index.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </ul>
+  </div>
+</nav>
+<h3>Equipped warehouses, storage, and distribution centers to manage medicines efficiently.</h3>
+        <div class="link-options">
+    <strong>Quick Links:</strong>
+    <select onchange="if(this.value) window.location.href=this.value;">
+        <option value="">Select Page</option>
+        <option value="home.html">🏠 Home</option>
+        <option value="dashboard.html">📊 Dashboard</option>
+        <option value="medical.html">💊 Medicines</option>
+        <option value="warehouse.html">🏭 Warehouse</option>
+        <option value="reports.html">📈 Reports</option>
+        <option value="https://www.google.com/maps?q=Ethiopian+Pharmaceutical+Supply+Service+Dessie+Tita">
+            📍 EPSS Dessie Branch Location
+        </option>
+    </select>
+</div>
+<!-- FACILITIES SECTION -->
+        <section id="facilities">
+            <h2 class="section-title">Health Facilities Served</h2>
+            
+            <!-- Data Table 4: Facilities List -->
+            <table class="data-table">
+                <caption><h3>Major Health Facilities We Serve</h3></caption>
+                <thead>
+                    <tr>
+                        <th>Facility Name</th>
+                        <th>Type</th>
+                        <th>Location</th>
+                        <th>Contact</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dessie Referral Hospital</td>
+                        <td>Hospital</td>
+                        <td>Dessie</td>
+                        <td>033-XXX-XXXX</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Borumeida Health Center</td>
+                        <td>Health Center</td>
+                        <td>Borumeida</td>
+                        <td>033-XXX-XXXX</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Kombolcha Hospital</td>
+                        <td>Hospital</td>
+                        <td>Kombolcha</td>
+                        <td>033-XXX-XXXX</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Haik Health Center</td>
+                        <td>Health Center</td>
+                        <td>Haik</td>
+                        <td>033-XXX-XXXX</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Kutaber Clinic</td>
+                        <td>Clinic</td>
+                        <td>Kutaber</td>
+                        <td>033-XXX-XXXX</td>
+                        <td>Active</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    <footer>
+    <div class="footer-container">
+         <!-- Quick Access Links -->
+        <div class="quick-access">
+            <h3>Quick Access</h3>
+            <ul class="quick-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="Facilities.html">Facilities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i>fb</a>
+            <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-x-twitter"></i>tw</a>
+            <a href="https://telegram.org" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i>tg</a>
+            <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i>lik</a>  
+        </div>
+        <!-- Footer Text -->
+        <div class="footer-text">
+            <p><strong>Ethiopian Pharmaceutical Supply Service – Dessie Branch</strong></p>
+            <p><i class="fas fa-phone-alt"></i> Emergency: 033-211-1999 | <i class="fas fa-envelope"></i> info@epsa-dessie.gov.et</p>
+            <p><i class="fas fa-map-marker-alt"></i> Dessie, Amhara Region</p>
+            <p>© 2026 Ethiopian Pharmaceutical Supply Service. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+    </body>
+</html>>
+
+

@@ -1,0 +1,230 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>EPSA Team</title>
+    <link rel="stylesheet" href="x.css">
+</head>
+<body>
+    <header>
+        <h1>Warehouse</h1> 
+      </header>
+      
+        <script>
+  function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+</script>
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- Hamburger (optional for mobile) -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li class="dropdown">
+        <a href="#">About ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="about.html">About</a></li>
+          <li><a href="Functions.html">Functions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Services ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="PROGRAMS.html">Programs</a></li>
+          <li><a href="medical.html">Medical</a></li>
+          <li><a href="registration.html">Registration</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="Distribution.html">Distribution</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Facilities ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="Facilities.html">Facilities</a></li>
+          <li><a href="Coverage.html">Coverage</a></li>
+          <li><a href="WAREHOUSE.html">Warehouse</a></li>
+          <li><a href="staff.html">Staff</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+<li>
+    <a href="https://www.google.com/">search</a>
+</li>
+<a href="index.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </ul>
+  </div>
+</nav>
+<h3>A large storage building for goods before distribution. 
+            It manages inventory, protects products, and enables efficient supply chain operations.</h3> 
+<!-- WAREHOUSE SECTION -->
+        <section id="warehouse">
+            <h2 class="section-title">Warehouse Operations</h2>
+            <p><b>Warehouse operations</b> are the essential activities performed within a warehouse to
+                 ensure products move efficiently through the supply chain. These operations form the backbone of logistics 
+                and typically involve a series of core functions designed to manage the flow of inventory from supplier to customer. </p>
+            
+            <!-- Data Table 5: Warehouse Statistics -->
+            <table class="data-table">
+                <caption><h3>Warehouse Capacity and Storage</h3></caption>
+                <thead>
+                    <tr>
+                        <th>Warehouse Area</th>
+                        <th>Capacity</th>
+                        <th>Temperature</th>
+                        <th>Humidity</th>
+                        <th>Security Level</th>
+                    </tr>
+                </thead><tbody>
+                    <tr>
+                        <td>Cold Chain Storage</td>
+                        <td>500 m³</td>
+                        <td>2-8°C</td>
+                        <td>45-65%</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td>Room Temperature Storage</td>
+                        <td>1500 m³</td>
+                        <td>15-25°C</td>
+                        <td>45-65%</td>
+                        <td>Medium</td>
+                    </tr>
+                    <tr>
+                        <td>Controlled Drugs</td>
+                        <td>100 m³</td>
+                        <td>15-25°C</td>
+                        <td>45-65%</td>
+                        <td>Maximum</td>
+                    </tr>
+                    <tr>
+                        <td>Emergency Stock</td>
+                        <td>300 m³</td>
+                        <td>15-25°C</td>
+                        <td>45-65%</td>
+                        <td>High</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+
+            <div class="quick-links">
+                <a href="#distribution" class="quick-link" onclick="showSection('distribution')">Distribution Schedule →</a>
+                <a href="#functions" class="quick-link" onclick="showSection('functions')">Inventory Management →</a>
+            </div>
+        </section>
+        <!DOCTYPE html>
+<html>
+<head>
+    <title>Warehouse - Room A</title>
+    
+</head>
+<body>
+    <div class="room">
+        <h1>🏥 Room A: Antibiotics Storage</h1>
+        <p style="text-align: center; color: #666;">Temperature: 2-8°C | Click any drug for details</p>
+        
+        <div class="drugs-grid">
+            <!-- Drug 1 -->
+            <div class="drug-item" onclick="showInfo('amoxicillin')">
+                <div class="drug-img">
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=300" alt="Amoxicillin">
+                </div>
+                <div class="drug-name">Amoxicillin</div>
+                <div class="drug-qty">54 units</div>
+            </div>
+            
+            <!-- Drug 2 -->
+            <div class="drug-item" onclick="showInfo('ciprofloxacin')">
+                <div class="drug-img">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=300" alt="Ciprofloxacin">
+                </div>
+                <div class="drug-name">Ciprofloxacin</div>
+                <div class="drug-qty">32 units</div>
+            </div>
+            
+            <!-- Drug 3 -->
+            <div class="drug-item" onclick="showInfo('azithromycin')">
+                <div class="drug-img">
+                    <img src="https://images.unsplash.com/photo-1550572017-2c6d3c4d63c6?w=300" alt="Azithromycin">
+                </div>
+                <div class="drug-name">Azithromycin</div>
+                <div class="drug-qty">28 units</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="drugTitle">Drug Information</h2>
+            
+            <div class="info-item">
+                <span class="info-label">Generic Name:</span>
+                <span id="infoGeneric">-</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Category:</span>
+                <span id="infoCategory">-</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Strength:</span>
+                <span id="infoStrength">-</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Manufacturer:</span>
+                <span id="infoManufacturer">-</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Batch No:</span>
+                <span id="infoBatch">-</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Expiry Date:</span>
+                <span id="infoExpiry">-</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Quantity:</span>
+                <span id="infoQuantity">-</span>
+            </div>
+        </div>
+    </div>
+ <script src="js.js"></script> 
+    
+ <footer>
+    <div class="footer-container">
+         <!-- Quick Access Links -->
+        <div class="quick-access">
+            <h3>Quick Access</h3>
+            <ul class="quick-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="Facilities.html">Facilities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i>fb</a>
+            <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-x-twitter"></i>tw</a>
+            <a href="https://telegram.org" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i>tg</a>
+            <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i>lik</a>  
+        </div>
+        <!-- Footer Text -->
+        <div class="footer-text">
+            <p><strong>Ethiopian Pharmaceutical Supply Service – Dessie Branch</strong></p>
+            <p><i class="fas fa-phone-alt"></i> Emergency: 033-211-1999 | <i class="fas fa-envelope"></i> info@epsa-dessie.gov.et</p>
+            <p><i class="fas fa-map-marker-alt"></i> Dessie, Amhara Region</p>
+            <p>© 2026 Ethiopian Pharmaceutical Supply Service. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+        </body>
+        </html>

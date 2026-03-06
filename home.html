@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+    <title>EPSA Home</title>
+    <link rel="stylesheet" href="x.css">
+<style>
+    /* Slider specific styles */
+    .slider-container {
+      width: 99%;
+      height: 600px;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+      border-radius: 6px;
+    }
+    .slider-track {
+      display: flex;
+      height: 100%;
+      transition: transform 1s ease-in-out;
+    }
+    .slider-track img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.45);
+      color: white;
+      border: none;
+      font-size: 35px;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+    }
+    .slider-btn:hover { 
+    background: rgba(0,0,0,0.7); }
+    .prev { left: 15px; }
+    .next { right: 15px; }
+    /* Hero padding */
+    .hero { 
+      padding-left: 70px;
+      color: white;
+    }
+    /* Image grid */
+    .imgage {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding-left: 20px;
+      margin: 20px;
+    }
+    .imgage img {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+    }
+    /* ===== Mobile responsive tweaks ===== */
+    @media (max-width:768px){
+      .slider-container { height: 300px; }
+      .slider-btn { font-size: 25px; padding: 8px 12px; }
+      .hero { padding-left: 15px; padding-right: 15px; }
+      header h1 { font-size: clamp(18px,5vw,28px); }
+      .imgage { flex-direction: column; gap: 10px; padding-left: 10px; }
+      .imgage img { width: 100%; height: auto; }
+    }
+  </style>
+
+</head>
+<body>
+
+    <header>
+         <img src="EPSSL.jpg" width="40%" height="30%" align="left">
+        <h1>EPSA Dessie Branch</h1>
+    </header>
+          <script>
+  function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+</script>
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- Hamburger (optional for mobile) -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li class="dropdown">
+        <a href="#">About ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="about.html">About</a></li>
+          <li><a href="Functions.html">Functions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Services ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="PROGRAMS.html">Programs</a></li>
+          <li><a href="medical.html">Medical</a></li>
+          <li><a href="registration.html">Registration</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="Distribution.html">Distribution</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Facilities ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="Facilities.html">Facilities</a></li>
+          <li><a href="Coverage.html">Coverage</a></li>
+          <li><a href="WAREHOUSE.html">Warehouse</a></li>
+          <li><a href="staff.html">Staff</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+<li>
+    <a href="https://www.google.com/">search</a>
+</li>
+<a href="index.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </ul>
+  </div>
+</nav>
+   
+<p>Ensuring Safe, Effective, and Affordable Medicines for Public Health Facilities</p>
+<!-- Slider -->
+  <div class="cards">
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack">
+        <img src="a.jpg" alt="services">
+        <img src="b.jpg" alt="servicess">
+        <img src="c.jpg" alt="services">
+        <img src="d.jpg" alt="services">
+        <img src="e.jpg" alt="services">
+        <img src="f.jpg" alt="services">
+        <img src="g.jpg" alt="services">
+        <img src="h.jpg" alt="services">
+        <img src="i.jpg" alt="services">
+        <img src="l.jpg" alt="services">
+        <img src="m.jpg" alt="services">
+        <img src="n.jpg" alt="services">
+        <img src="o.jpg" alt="services">
+        <img src="p.jpg" alt="services">
+      </div>
+    <button class="slider-btn prev" onclick="prevSlide()">&#10094;</button>
+      <button class="slider-btn next" onclick="nextSlide()">&#10095;</button> 
+    </div>
+  </div>
+
+   <section>
+    <h2 class="section-title">Welcome Home</h2>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <div class="stat-number">90+</div>
+            <h3>Health Facilities</h3>
+
+            <img src="DESSIEB.HTML.png" width="180" height="120" alt="DESSIE Branch" usemap="#mapFacilities">
+            <map name="mapFacilities">
+                <area shape="rect" coords="0,0,300,200" alt="Facilities" href="Facilities.html">
+            </map>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-number">500+</div>
+            <h3>Monthly Deliveries</h3>
+
+            <img src="delivery.PNG" width="180" height="120" alt="Delivery" usemap="#mapDelivery">
+            <map name="mapDelivery">
+                <area shape="rect" coords="0,0,300,200" alt="Coverage" href="Coverage.html">
+            </map>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-number">10,000+</div>
+            <h3>Medicine Types</h3>
+
+            <img src="download.jpg" width="180" height="120" alt="Medicine" usemap="#mapMedicine">
+            <map name="mapMedicine">
+                <area shape="rect" coords="0,0,300,200" alt="Medical" href="medical.html">
+            </map>
+        </div>
+
+    </div>
+
+    <div class="quick-links">
+        <a href="about.html" class="quick-link">📋 About EPSA</a>
+        <a href="services.html" class="quick-link">⚙️ Our Services</a>
+        <a href="contact.html" class="quick-link">📞 Get Support</a>
+    </div>
+</section>
+<script>
+const sliderTrack = document.getElementById("sliderTrack");
+let slides = sliderTrack.children;
+let index = 0;
+
+// Clone first slide to create seamless loop
+sliderTrack.appendChild(slides[0].cloneNode(true));
+slides = sliderTrack.children;
+
+// Function to update slide position
+function updateSlide(animate = true) {
+  sliderTrack.style.transition = animate ? "transform 1s ease-in-out" : "none";
+  sliderTrack.style.transform = `translateX(-${index * 100}%)`;
+}
+
+// Next slide
+function nextSlide() {
+  index++;
+  updateSlide();
+  // Reset to first slide after last clone
+  if (index === slides.length - 1) {
+    setTimeout(() => {
+      index = 0;
+      updateSlide(false);
+    }, 1000); // match transition duration
+  }
+}
+
+// Previous slide
+function prevSlide() {
+  if (index === 0) {
+    index = slides.length - 2; // skip cloned slide
+    updateSlide(false);
+  } else {
+    index--;
+    updateSlide();
+  }
+}
+
+// Auto slide every 5 seconds
+setInterval(nextSlide, 5000);
+</script>
+<footer>
+    <div class="footer-container">
+         <!-- Quick Access Links -->
+        <div class="quick-access">
+            <h3>Quick Access</h3>
+            <ul class="quick-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="Facilities.html">Facilities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i>fb</a>
+            <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-x-twitter"></i>tw</a>
+            <a href="https://telegram.org" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i>tg</a>
+            <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i>lik</a>  
+        </div>
+        <!-- Footer Text -->
+        <div class="footer-text">
+            <p><strong>Ethiopian Pharmaceutical Supply Service – Dessie Branch</strong></p>
+            <p><i class="fas fa-phone-alt"></i> Emergency: 033-211-1999 | <i class="fas fa-envelope"></i> info@epsa-dessie.gov.et</p>
+            <p><i class="fas fa-map-marker-alt"></i> Dessie, Amhara Region</p>
+            <p>© 2026 Ethiopian Pharmaceutical Supply Service. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

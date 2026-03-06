@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">  
+    <title>EPSA Reports & Inventory</title>
+    <link rel="stylesheet" href="x.css">
+</head>
+<body>
+     <header><h1>EPSA Reports</h1>
+    </header>
+   
+    <script>
+  function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+</script>
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- Hamburger (optional for mobile) -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li class="dropdown">
+        <a href="#">About ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="about.html">About</a></li>
+          <li><a href="Functions.html">Functions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Services ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="PROGRAMS.html">Programs</a></li>
+          <li><a href="medical.html">Medical</a></li>
+          <li><a href="registration.html">Registration</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="Distribution.html">Distribution</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#">Facilities ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="Facilities.html">Facilities</a></li>
+          <li><a href="Coverage.html">Coverage</a></li>
+          <li><a href="WAREHOUSE.html">Warehouse</a></li>
+          <li><a href="staff.html">Staff</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+<li>
+    <a href="https://www.google.com/">search</a>
+</li>
+<a href="index.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </ul>
+  </div>
+</nav>
+
+ <h3>Tracks and documents medicine supply, distribution, and health program activities.</h3>
+    <h1>📊 EPSA Reports</h1>
+    <h3>📊 Stock Reports</h3>
+    <ul>
+        <li><a href="#" onclick="alert('Current Stock Status\nTotal: 1,240 medicines\nStock Level: 85%')">Current Stock Status</a></li>
+        <li><a href="#" onclick="alert('Expiry Report\n45 medicines expiring soon')">Expiry Report</a></li>
+        <li><a href="#" onclick="alert('Low Stock Alert\n23 medicines need restocking')">Low Stock Alert</a></li>
+    </ul>
+    
+    <h3>🚚 Delivery Reports</h3>
+    <ul>
+        <li><a href="#" onclick="alert('Monthly Delivery Summary\n312 deliveries this month')">Monthly Delivery Summary</a></li>
+        <li><a href="#" onclick="alert('Pending Deliveries\n14 deliveries pending')">Pending Deliveries</a></li>
+        <li><a href="#" onclick="alert('Delivery Performance\n92% on-time delivery')">Delivery Performance</a></li>
+    </ul>
+    
+    <h3>💊 Medicine Reports</h3>
+    <ul>
+        <li><a href="#" onclick="alert('Medicine Usage Report\n45,200 units consumed monthly')">Medicine Usage Report</a></li>
+        <li><a href="#" onclick="alert('Category-wise Report\n8 categories available')">Category-wise Report</a></li>
+        <li><a href="#" onclick="alert('Supplier Performance\n15 active suppliers')">Supplier Performance</a></li>
+    </ul>
+    <h1>📦 EPSA Inventory</h1>
+    <h2>Current Inventory Status</h2>
+    <table>
+        <tr>
+            <th>Medicine</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>Amoxicillin 500mg</td>
+            <td>Antibiotic</td>
+            <td>1,250</td>
+            <td class="in-stock">✅ In Stock</td>
+        </tr>
+        <tr>
+            <td>Paracetamol 500mg</td>
+            <td>Analgesic</td>
+            <td>3,450</td>
+            <td class="in-stock">✅ In Stock</td>
+        </tr>
+        <tr>
+            <td>Atenolol 50mg</td>
+            <td>Cardiovascular</td>
+            <td>890</td>
+            <td class="low-stock">⚠️ Low Stock</td>
+        </tr>
+        <tr>
+            <td>Metformin 850mg</td>
+            <td>Diabetic</td>
+            <td>1,780</td>
+            <td class="in-stock">✅ In Stock</td>
+        </tr>
+        <tr>
+            <td>Insulin</td>
+            <td>Diabetic</td>
+            <td>420</td>
+            <td class="critical">🔴 Critical</td>
+        </tr>
+    </table>
+    
+    <div class="summary">
+        <h3>📊 Inventory Summary</h3>
+        <ul>
+            <li><strong>Total Items:</strong> 1,240</li>
+            <li><strong>In Stock:</strong> 1,150</li>
+            <li><strong>Low Stock:</strong> 85</li>
+            <li><strong>Critical:</strong> 5</li>
+            <li><strong>Out of Stock:</strong> 0</li>
+        </ul>
+        <a href="registration.html">Registration</a>
+    </div>
+    <footer>
+    <div class="footer-container">
+         <!-- Quick Access Links -->
+        <div class="quick-access">
+            <h3>Quick Access</h3>
+            <ul class="quick-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="Facilities.html">Facilities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i>fb</a>
+            <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-x-twitter"></i>tw</a>
+            <a href="https://telegram.org" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i>tg</a>
+            <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i>lik</a>  
+        </div>
+        <!-- Footer Text -->
+        <div class="footer-text">
+            <p><strong>Ethiopian Pharmaceutical Supply Service – Dessie Branch</strong></p>
+            <p><i class="fas fa-phone-alt"></i> Emergency: 033-211-1999 | <i class="fas fa-envelope"></i> info@epsa-dessie.gov.et</p>
+            <p><i class="fas fa-map-marker-alt"></i> Dessie, Amhara Region</p>
+            <p>© 2026 Ethiopian Pharmaceutical Supply Service. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

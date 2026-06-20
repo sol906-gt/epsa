@@ -36,7 +36,7 @@
       transition: all 0.2s ease;
     }
 
-    /* header */
+    /* header with back button */
     .header {
       display: flex;
       flex-wrap: wrap;
@@ -45,6 +45,56 @@
       margin-bottom: 2.8rem;
       padding-bottom: 0.75rem;
       border-bottom: 2px dashed rgba(52, 73, 94, 0.15);
+      gap: 0.8rem 1.2rem;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* back link styled as button */
+    .back-link {
+      background: rgba(30, 43, 55, 0.08);
+      border: none;
+      padding: 0.55rem 1.2rem 0.55rem 1rem;
+      border-radius: 60px;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #1e2b37;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      border: 1px solid rgba(255,255,255,0.6);
+      backdrop-filter: blur(2px);
+      text-decoration: none; /* remove underline */
+    }
+
+    .back-link i {
+      font-size: 1.1rem;
+      color: #2d6a8f;
+      transition: transform 0.2s;
+    }
+
+    .back-link:hover {
+      background: rgba(45, 106, 143, 0.12);
+      border-color: rgba(45, 106, 143, 0.15);
+      transform: translateX(-2px);
+      box-shadow: 0 6px 12px rgba(0, 20, 30, 0.06);
+      text-decoration: none;
+    }
+
+    .back-link:hover i {
+      transform: translateX(-3px);
+    }
+
+    .back-link:active {
+      transform: scale(0.94);
     }
 
     .header h1 {
@@ -77,6 +127,7 @@
       display: flex;
       align-items: center;
       gap: 0.6rem;
+      white-space: nowrap;
     }
 
     .member-count i {
@@ -107,7 +158,6 @@
       overflow: hidden;
     }
 
-    /* subtle decorative line */
     .member-card::before {
       content: '';
       position: absolute;
@@ -228,14 +278,37 @@
       margin-right: 6px;
     }
 
-    /* interactive highlight */
     .member-card.highlight {
       background: #f3faff;
       border: 1px solid #6a9ec4;
       box-shadow: 0 0 0 3px rgba(45, 106, 143, 0.15);
     }
 
-    /* empty state / responsiveness */
+    /* click hint */
+    .click-hint {
+      text-align: center;
+      margin-top: 2.2rem;
+      font-size: 0.85rem;
+      color: #4c6f88;
+      opacity: 0.7;
+      letter-spacing: 0.3px;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .click-hint i {
+      margin-right: 4px;
+    }
+
+    .click-hint span {
+      background: rgba(45, 106, 143, 0.08);
+      padding: 0.2rem 1rem;
+      border-radius: 50px;
+    }
+
+    /* responsive */
     @media (max-width: 600px) {
       .container {
         padding: 1.8rem 1.2rem 2rem;
@@ -262,6 +335,13 @@
         font-size: 0.9rem;
         padding: 0.1rem 0.5rem;
       }
+      .back-link {
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem 0.4rem 0.8rem;
+      }
+      .header-left {
+        gap: 0.6rem;
+      }
     }
 
     @media (max-width: 450px) {
@@ -271,58 +351,46 @@
       }
       .header {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 0.8rem;
+        align-items: stretch;
       }
       .member-count {
         align-self: flex-start;
       }
-    }
-
-    /* extra little interactive hover hint */
-    .click-hint {
-      text-align: center;
-      margin-top: 2.2rem;
-      font-size: 0.85rem;
-      color: #4c6f88;
-      opacity: 0.7;
-      letter-spacing: 0.3px;
-      display: flex;
-      justify-content: center;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-    }
-
-    .click-hint i {
-      margin-right: 4px;
-    }
-
-    .click-hint span {
-      background: rgba(45, 106, 143, 0.08);
-      padding: 0.2rem 1rem;
-      border-radius: 50px;
+      .header-left {
+        justify-content: space-between;
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
 <div class="container">
-  <div class="header">
-    <h1>
-      <i class="fas fa-users"></i> 
-      Group members
-    </h1>
-    <div class="member-count">
-      <i class="fas fa-user-check"></i> 
-      6 members
+  <!-- ===== MEMBERS SECTION ===== -->
+  <div id="membersSection">
+    <div class="header">
+      <div class="header-left">
+        <!-- BACK LINK: navigates to home.html -->
+        <a href="home.html" class="back-link">
+          <i class="fas fa-arrow-left"></i> Back
+        </a>
+        <h1>
+          <i class="fas fa-users"></i> 
+          Group members
+        </h1>
+      </div>
+      <div class="member-count">
+        <i class="fas fa-user-check"></i> 
+        6 members
+      </div>
     </div>
-  </div>
 
-  <!-- grid where cards will be injected by JS -->
-  <div id="memberGrid" class="card-grid"></div>
+    <!-- grid -->
+    <div id="memberGrid" class="card-grid"></div>
 
-  <div class="click-hint">
-    <span><i class="fas fa-mouse-pointer"></i> click any card</span>
-    <span><i class="fas fa-arrow-right"></i> highlight effect</span>
+    <div class="click-hint">
+      <span><i class="fas fa-mouse-pointer"></i> click any card</span>
+      <span><i class="fas fa-arrow-right"></i> highlight effect</span>
+    </div>
   </div>
 </div>
 
@@ -338,15 +406,14 @@
       { name: "Amlaku Getawey", id: "0242/16" }
     ];
 
-    // references
+    // DOM refs
     const grid = document.getElementById('memberGrid');
 
-    // ----- helper: get initials (max 2) -----
+    // ----- helper: get initials -----
     function getInitials(fullName) {
       if (!fullName) return '?';
       const parts = fullName.trim().split(/\s+/);
       if (parts.length === 1) return parts[0].charAt(0).toUpperCase();
-      // first letter of first + first letter of last
       const first = parts[0].charAt(0).toUpperCase();
       const last = parts[parts.length - 1].charAt(0).toUpperCase();
       return first + last;
@@ -358,14 +425,11 @@
       members.forEach((member, index) => {
         const card = document.createElement('div');
         card.className = 'member-card';
-        // store a small data attribute
         card.dataset.index = index;
         card.dataset.name = member.name;
 
-        // avatar initials
         const initials = getInitials(member.name);
 
-        // build card inner HTML
         card.innerHTML = `
           <div class="card-avatar">
             <div class="avatar-icon" aria-hidden="true">${initials}</div>
@@ -381,18 +445,11 @@
           </div>
         `;
 
-        // ---- interactive: click to highlight (toggle) ----
+        // click highlight
         card.addEventListener('click', function(e) {
-          // prevent event from bubbling to avoid weirdness
           e.stopPropagation();
-          
-          // remove highlight from all cards
           document.querySelectorAll('.member-card').forEach(c => c.classList.remove('highlight'));
-          
-          // add highlight to this card
           this.classList.add('highlight');
-          
-          // (optional) subtle vibration feedback if supported
           if (navigator.vibrate) navigator.vibrate(10);
         });
 
@@ -400,27 +457,24 @@
       });
     }
 
-    // ---- additional: click on background removes highlight ----
+    // click outside cards -> remove highlight
     document.addEventListener('click', function(e) {
-      // if click is outside any .member-card, remove all highlights
       const card = e.target.closest('.member-card');
       if (!card) {
         document.querySelectorAll('.member-card').forEach(c => c.classList.remove('highlight'));
       }
     });
 
-    // ---- extra: escape key removes highlight ----
+    // escape key: remove highlight
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
         document.querySelectorAll('.member-card').forEach(c => c.classList.remove('highlight'));
       }
     });
 
-    // ---- init ----
+    // ----- init -----
     renderCards();
-
-    // ---- (optional) log to console for fun ----
-    console.log('✨ Group members interactive cards ready! Click any card.');
+    console.log('✨ Group members interactive with <a href="home.html">Back</a> link.');
   })();
 </script>
 
